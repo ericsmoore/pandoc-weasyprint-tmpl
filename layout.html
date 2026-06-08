@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  $for(css)$
+  <link rel="stylesheet" href="$css$">
+  $endfor$
+</head>
+
+<body>
+  <section class="title-page">
+    <h1 class="title">$title$</h1>
+    <h2 class="author">$author$</h2>
+    $if(date)$
+    <h2 class="date">$date$</h2>
+    $endif$
+  </section>
+
+  $body$
+</body>
+
+</html>

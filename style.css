@@ -1,0 +1,147 @@
+@page {
+  size: 5in 8in;
+  font-family: 'Adobe Garamond';
+  font-variant: all-small-caps;
+
+  @top-center {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    padding-top: var(--lh);
+    content: string(title);
+  }
+
+  @bottom-center {
+    font-size: 14px;
+    padding-bottom: calc(3*var(--lh));
+    content: counter(page);
+  }
+}
+
+@page :left {
+  margin: 0.75in 0.65in 1in 0.5in;
+
+  @top-center {
+    content: string(title);
+  }
+}
+
+@page :right {
+  margin: 0.75in 0.5in 1in 0.65in;
+
+  @top-center {
+    content: string(chapter-title);
+  }
+}
+
+@page chapter-start {
+  @top-center {
+    content: none;
+  }
+}
+
+@page :first, :blank{
+  @top-center {
+    content: none;
+  }
+
+  @bottom-center {
+    content: none;
+  }
+}
+
+/* ========== paragraph ========== */
+
+:root {
+  --lh: 18px;
+}
+
+body {
+  font: 14px 'Adobe Garamond';
+  line-height: var(--lh);
+  font-feature-settings: "liga", "kern", "onum";
+}
+
+p {
+  text-align: justify;
+  hyphens: auto;
+  margin: 0;
+  text-indent: 1.5em;
+  line-height: var(--lh);
+}
+
+:is(h1, h2, hr)+p {
+  text-indent: 0;
+}
+
+hr {
+  border: none;
+  padding-top: var(--lh);
+}
+
+/* ========== headings ========== */
+
+.title-page {
+  page: title;
+  break-after: right;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+
+  line-height: calc(2 * var(--lh));
+  margin-top: calc(2 * var(--lh));
+  margin-bottom: calc(4 * var(--lh));
+
+  page-break-before: always;
+  string-set: chapter-title content();
+  page: chapter-start;
+}
+
+.title {
+  page: title;
+  font-size: 2em;
+  margin-bottom: 1em;
+  string-set: title content();
+}
+
+.author{
+  page:title;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.date {
+  page:title;
+  font-size: 1.25em;
+  margin-top: 22em;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: normal;
+
+  line-height: calc(2 * var(--lh));
+  margin-top: calc(2 * var(--lh));
+  margin-bottom: calc(1 * var(--lh));
+}
+
+/* ========== text style ========== */
+
+strong,
+b {
+  font-weight: 600;
+}
+
+em,
+i {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+  letter-spacing: .05em;
+}

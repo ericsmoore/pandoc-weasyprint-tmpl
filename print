@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [[ "$1" ]]; then
+  pandoc $1 -o manuscript.pdf --pdf-engine=weasyprint \
+  --css style.css --css fonts/font.css --template=layout.html
+  open manuscript.pdf
+fi
