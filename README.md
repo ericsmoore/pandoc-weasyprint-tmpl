@@ -1,4 +1,5 @@
-My template for typesetting novels. Very hardcoded and bad.
+My template for typesetting novels using Pandoc through WeasyPrint. Very
+hardcoded and bad.
 
 Based off NYRB, William Morrow *The Hobbit*, and others.
 
