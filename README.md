@@ -8,6 +8,6 @@ anything like that or headings past level 2 the lines will get off-grid and it w
 
 TODO:
 
-[ ]: add styles for more elements & ensure spacing
-[ ]: poetry collection type layout
-  [ ]: needs way to stitch files w/ different layouts 
+- [ ] add styles for more elements & ensure spacing
+- [ ] poetry collection type layout
+  - [ ] needs way to stitch files w/ different layouts 
