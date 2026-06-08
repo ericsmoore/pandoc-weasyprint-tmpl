@@ -5,3 +5,9 @@ Based off NYRB, William Morrow *The Hobbit*, and others.
 
 Still working on poetry, blockquotes, and other stuff. Right now if you use
 anything like that or headings past level 2 the lines will get off-grid and it will suck.
+
+TODO:
+
+[ ]: add styles for more elements & ensure spacing
+[ ]: poetry collection type layout
+  [ ]: needs way to stitch files w/ different layouts 
