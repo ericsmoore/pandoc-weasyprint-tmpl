@@ -39,7 +39,8 @@
   }
 }
 
-@page :first, :blank{
+@page :first,
+:blank {
   @top-center {
     content: none;
   }
@@ -75,7 +76,8 @@ p {
 
 hr {
   border: none;
-  padding-top: var(--lh);
+  margin: 0;
+  padding-top: calc(2*var(--lh));
 }
 
 /* ========== headings ========== */
@@ -107,14 +109,14 @@ h1 {
   string-set: title content();
 }
 
-.author{
-  page:title;
+.author {
+  page: title;
   font-size: 1.25em;
   margin-bottom: 0.5em;
 }
 
 .date {
-  page:title;
+  page: title;
   font-size: 1.25em;
   margin-top: 22em;
 }
@@ -144,4 +146,54 @@ i {
 .smallcaps {
   font-variant: small-caps;
   letter-spacing: .05em;
+}
+
+/* ========== poems ========== */
+
+.poem {
+  margin: var(--lh) auto;
+  padding-left: 2em;
+  padding-right: 1em;
+}
+
+.poem p,
+.poem .line-block {
+  text-align: left;
+  text-indent: 0;
+  margin: 0;
+  line-height: var(--lh);
+  hyphens: none;
+}
+
+.poem p+p {
+  margin-top: var(--lh);
+}
+
+.poem+p {
+  text-indent: 0;
+}
+
+
+/* ========== quotes ========== */
+
+blockquote {
+  margin: var(--lh) 0;
+  padding: 0 0 0 2em;
+}
+
+blockquote p {
+  text-align: justify;
+  text-indent: 0;
+  margin: 0;
+  line-height: var(--lh);
+  hyphens: none;
+}
+
+blockquote p+p {
+  text-indent: 1.5em;
+  margin-top: 0em;
+}
+
+blockquote+p {
+  text-indent: 0;
 }
